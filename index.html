@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lyma Energy</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader"><div class="spinner"></div></div>
+
+  <!-- Navbar -->
+  <header>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Lyma</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#lubricants">Lubricants</a></li>
+        <li class="nav-item"><a class="nav-link" href="#lpg">LPG</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#distribution">Distribution</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+  <!-- Main Content -->
+  <main>
+    <section id="home" class="section parallax" data-aos="fade-up">
+      <div class="overlay d-flex flex-column justify-content-end align-items-start h-100 p-4">
+        <h1>Welcome to Lyma Energy</h1>
+        <p>Authorized distributor of OLA Energy Kenya products.</p>
+        <a href="#contact" class="btn btn-lyma mt-3">Get in Touch</a>
+      </div>
+    </section>
+
+    <section id="lubricants" class="section image-section">
+      <img src="img\lubricant.jpg" alt="Lubricants" class="bg-img" />
+      <div class="overlay-content" data-aos="fade-right">
+        <h2>Lubricants</h2>
+        <p>Premium engine oils, gear oils, and brake fluids.</p>
+        <a href="#portfolio" class="btn btn-lyma">Learn More</a>
+      </div>
+    </section>
+
+    <section id="lpg" class="section image-section">
+      <img src="img/Mpishi Bora Campaign.jpg" alt="LPG" class="bg-img" />
+      <div class="overlay-content" data-aos="fade-right">
+        <h2>LPG</h2>
+        <p>Clean and efficient LPG solutions.</p>
+        <a href="#portfolio" class="btn btn-lyma">Learn More</a>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section image-section">
+      <img src="img/lubricant.jpg" alt="Portfolio" class="bg-img" />
+      <div class="overlay-content" data-aos="fade-right">
+        <h2>Portfolio</h2>
+        <p>Successful partnerships and projects.</p>
+        <a href="#distribution" class="btn btn-lyma">Learn More</a>
+      </div>
+    </section>
+
+    <section id="distribution" class="section image-section">
+      <img src="img/DistributorshiptnewII.png" alt="Distribution" class="bg-img" />
+      <div class="overlay-content" data-aos="fade-right">
+        <h2>Distribution</h2>
+        <p>Efficient delivery across regions.</p>
+        <a href="#contact" class="btn btn-lyma">Learn More</a>
+      </div>
+    </section>
+
+    <section id="contact" class="section image-section">
+      <img src="img/lubricant.jpg" alt="Contact" class="bg-img" />
+      <div class="overlay-content" data-aos="fade-right">
+        <h2>Contact Us</h2>
+        <p>Fourth Business Park, Ruiru | 0728 170 155 | 0748 240 575</p>
+        <a href="tel:+254728170155" class="btn btn-lyma">Call Now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Call Button -->
+  <div class="floating-call-btn">
+    <button aria-label="Call us" onclick="window.location.href='tel:+254728170155'">📞</button>
+  </div>
+
+  <!-- Footer (removed sticky as requested) -->
+  <footer class="footer text-center py-4">
+    <div>
+      <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p class="mt-2 mb-0">&copy; 2025 Lyma Energy. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
