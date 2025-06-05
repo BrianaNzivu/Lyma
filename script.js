@@ -1,33 +1,50 @@
-document.addEventListener("DOMContentLoaded", () => {
-  AOS.init({
-    duration: 800,
-    once: true,
-  });
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize AOS animations
+AOS.init({
+  duration: 1000,
+  once: false
+})
 
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  // Scroll spy for navbar active link
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  const messages = ["Welcome to Lyma Energy", "Fueling Your Journey", "Driven by Quality"];
+  let msgIndex = 0, charIndex = 0;
+  const typedText = document.getElementById("typed-text");
 
-  function activateNav() {
-    let scrollPos = window.scrollY || window.pageYOffset;
+  function typeEffect() {
+    if (charIndex < messages[msgIndex].length) {
+      typedText.textContent += messages[msgIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeEffect, 100);
+    } else {
+      setTimeout(() => {
+        typedText.textContent = '';
+        charIndex = 0;
+        msgIndex = (msgIndex + 1) % messages.length;
+        typeEffect();
+      }, 2000);
+    }
+  }
+  typeEffect();
 
-    sections.forEach((section) => {
-      const top = section.offsetTop - 80; // offset for navbar height
-      const bottom = top + section.offsetHeight;
-      const id = section.getAttribute("id");
+  window.addEventListener('scroll', () => {
+    let currentSectionId = '';
 
-      if (scrollPos >= top && scrollPos < bottom) {
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === "#" + id) {
-            link.classList.add("active");
-          }
-        });
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80; // Adjust for navbar height
+      const sectionHeight = section.offsetHeight;
+
+      if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+        currentSectionId = section.getAttribute('id');
       }
     });
-  }
 
-  window.addEventListener("scroll", activateNav);
-
-  // Initial activation
-  activateNav();
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + currentSectionId) {
+        link.classList.add('active');
+      }
+    });
+  });
 });

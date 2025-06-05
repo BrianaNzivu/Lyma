@@ -3,9 +3,22 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: black;
-  color: white;
+  color: rgb(255, 255, 255);
   scroll-behavior: smooth;
+  
+}
+h1{
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
 }
 
 /* Header sticky transparent navbar */
@@ -14,14 +27,14 @@ header {
   top: 0;
   z-index: 1030;
   background-color: transparent;
-  backdrop-filter: saturate(180%) blur(10px);
-  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(180%) blur(5px);
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
   transition: background-color 0.4s ease;
 }
 
 /* Navbar brand */
 .navbar-brand {
-  color: black !important;
+  color: transparent;
   font-weight: 700;
 }
 
@@ -37,7 +50,7 @@ header {
 /* Active and hover nav link */
 .navbar .nav-link.active,
 .navbar .nav-link:hover {
-  color: white !important;
+  color: red !important;
 }
 
 /* Red underline for active nav link */
@@ -62,12 +75,26 @@ header {
   box-sizing: border-box;
   scroll-snap-align: start;
   color: white;
-  background-color: black;
+  margin-top: 5px;
+}
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+  position: relative;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: flex-end;
+  color: transparent;
+}
 /* Parallax and overlay for home */
 .parallax {
-  background: url('img/home-bg.jpg') no-repeat center center/cover;
+  background-color: black;
   position: relative;
 }
 
@@ -85,7 +112,8 @@ header {
 .bg-img {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  object-fit: cover;
+  object-fit: fill;
+  filter: brightness(0.7);
   object-position: center;
   z-index: -1;
   transition: transform 0.5s ease;
@@ -124,7 +152,34 @@ header {
   background-color: #cc0000;
   color: white !important;
 }
+.custom-shape-divider-bottom-1749140203 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
 
+.custom-shape-divider-bottom-1749140203 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 71px;
+}
+
+.custom-shape-divider-bottom-1749140203 .shape-fill {
+    fill: #FFFFFF;
+}
+.bc-img {
+  width: 750px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  /* margin-left: 9dvh; */
+  margin-bottom: 150px;
+}
 /* Floating Call Button */
 .floating-call-btn {
   position: fixed;
@@ -165,4 +220,68 @@ header {
 
 .footer a:hover {
   color: red;
+}
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: white;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+.overlay-2 {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6); /* translucent black */
+  color: white; /* text color */
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-right: 100px;
+  animation: fadeInRight 1.5s ease forwards;
+  opacity: 0;
+}
+
+/* Fade in from right animation */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%) translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
+  }
+}
+.custom-shape-divider-bottom-1749141146 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1749141146 svg {
+    position: relative;
+    display: block;
+    width: calc(105% + 1.3px);
+    height: 94px;
+}
+
+.custom-shape-divider-bottom-1749141146 .shape-fill {
+    fill: #FFFFFF;
 }
