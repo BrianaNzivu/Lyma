@@ -4,7 +4,9 @@ AOS.init({
   duration: 1000,
   once: false
 })
-
+  AOS.init({
+        // start the animation a bit before it's fully in view (optional)
+  });
   // Scroll spy for navbar active link
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
