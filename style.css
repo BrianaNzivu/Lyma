@@ -248,14 +248,6 @@ header {
   z-index: 10;
 }
 
-@media (max-width: 768px) {
-  .image-section {
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-}
-
-
 @keyframes bounce {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(10px); }
@@ -263,39 +255,37 @@ header {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+  .image-section {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
   .overlay-content,
   .overlay-2 {
     padding: 1rem;
     text-align: center;
   }
-
   .overlay-content h1,
   .overlay-2 h1 {
     font-size: 2rem;
   }
-
   .overlay-content p,
   .overlay-2 p {
     font-size: 1rem;
   }
-
   .bc-img {
     width: 100%;
     height: auto;
     margin-bottom: 50px;
+    object-fit: cover;
   }
-}
-@media (max-width: 768px) {
   h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
-
   p {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
-
   .overlay-2 {
     position: relative;
     top: auto;
@@ -308,18 +298,35 @@ header {
     box-shadow: none;
     animation: none;
     opacity: 1;
-    background-color: rgba(0, 0, 0, 0.6); /* keep background for contrast */
+    background-color: rgba(0, 0, 0, 0.6);
   }
-
-  .bc-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 1rem;
-  }
-
   .btn-lyma {
     padding: 0.5rem 1rem;
     font-size: 1rem;
+  }
+
+  /* New: Move lpg and distribution under ibc-img on mobile */
+  .ibc-img + .lpg,
+  .ibc-img + .distribution {
+    display: block;
+    margin-top: 1rem;
+    padding-left: 0;
+  }
+}
+
+/* Desktop styles: side by side with padding */
+@media (min-width: 769px) {
+  .image-section {
+    flex-direction: row;
+    align-items: center;
+  }
+  .ibc-img {
+    max-width: 50%;
+  }
+  .lpg,
+  .distribution {
+    max-width: 40%;
+    padding-left: 2rem;
+    display: block;
   }
 }
