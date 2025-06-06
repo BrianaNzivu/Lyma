@@ -287,3 +287,25 @@ header {
 .custom-shape-divider-bottom-1749141146 .shape-fill {
     fill: #FFFFFF;
 }
+@media (max-width: 768px) {
+  .overlay-2,
+  .overlay-content {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .overlay-2 h1,
+  .overlay-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .overlay-2 p,
+  .overlay-content p {
+    font-size: 1rem;
+  }
+}
+.image-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
