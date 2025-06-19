@@ -66,5 +66,26 @@ document.querySelectorAll(".slider-dots .dot").forEach((dot, i) => {
   });
 });
 
-// Initialize
+// Initialize first testimonial
 updateTestimonial(0);
+
+// Active navbar link based on scroll position
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  let currentId = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    if (window.scrollY >= sectionTop) {
+      currentId = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").includes(currentId)) {
+      link.classList.add("active");
+    }
+  });
+});
