@@ -1,157 +1,287 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lyma Energy</title>
-
-  <!-- Google Fonts: Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <!-- Custom CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lyma Intergrated</title>
+  <!-- Bootstrap & Animate.css CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Preloader -->
-  <div id="preloader"><div class="spinner"></div></div>
+  <!-- HEADER -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><span class="text-danger">Lyma</span><span class="text-dark">Intergrated</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lubricants">Lubricants</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lpg">LPG</a></li>
+          <li class="nav-item"><a class="nav-link" href="#distribution">Distribution</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <!-- Sticky Transparent Navbar -->
-  <header>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Lyma</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- HERO SECTION -->
+  <section class="hero d-flex flex-column justify-content-center align-items-center text-center text-white bg-dark vh-100" id="home">
+    <div class="overlay-shape position-absolute"></div>
+    <div class="container position-relative z-1 animate__animated animate__fadeIn">
+      <h1 class="display-4 fw-bold">Premium Lubricants &<br>LPG Solutions</h1>
+      <p class="lead">Powering your engines and homes with quality products for optimal performance</p>
+      <a href="#contact" class="btn btn-danger btn-lg mt-3">Contact Us</a>
+    </div>
+    <div class="scroll-down position-absolute bottom-0 pb-4">
+      <span>Scroll Down</span>
+      <div class="bouncing-arrow">&#8595;</div>
+    </div>
+  </section>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#lubricants">Lubricants</a></li>
-            <li class="nav-item"><a class="nav-link" href="#lpg">LPG</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#distribution">Distribution</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
+  <!-- ABOUT US SECTION -->
+  <section id="about" class="py-5 bg-light animate__animated">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h3 class="text-danger">Your Trusted Partner in Energy Solutions</h3>
+          <p>Lyma Intergrated has been a leading provider of premium lubricants and LPG products for over 25 years.</p>
+          <p>Our commitment to excellence, innovation, and customer satisfaction has made us the preferred choice for individuals and businesses across the country.</p>
+          <p>With a nationwide distribution network and dedicated team of professionals, we ensure timely delivery and exceptional service.</p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="img\Image 3.jpg" alt="About Graphic" class="img-fluid rounded shadow">
         </div>
       </div>
-    </nav>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-    <div id="container">
-    <section id="home" class="section parallax" data-aos="fade-up">
-      <img src="img\home-bg.png" alt="LPG" class="bg-img" />
-      <div class="overlay d-flex flex-column justify-content-end align-items-start h-100 p-4">
-        <h1 id="typed-text"></h1>
-        <p>Authorized distributor of OLA Energy Kenya products.</p>
-        <a href="#contact" class="btn btn-lyma mt-3">Get in Touch</a>
-      </div>
-      <div class="scroll-down-arrow" onclick="document.querySelector('#lubricants').scrollIntoView({ behavior: 'smooth' });">
-        <i class="fas fa-chevron-down"></i>
-      </div>
-    </section>
-
-    <section id="lubricants" class="section image-section snap-section">
-      <img src="img/lubricant.jpg" alt="Lubricants" class="bg-img" />
-      <div class="overlay-content" data-aos="fade-right">
-        <h1>LUBRICANT EXPERTS</h1>
-        <p>We are an authorized distributor of OLA ENERGY KENYA Ltd products including
-            OLA Petrol and Diesel, OLA Kerosene, OLA Engine, Gear and Brake Oils, OLA
-            Industrial Oils and OLA PLG products.</p>
-        <a href="#portfolio" class="btn btn-lyma">Learn More</a>
-      </div>
-      <div class="custom-shape-divider-bottom-1749140203">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-          </svg>
-      </div>
-    </section>
-
-    <section id="lpg" class="section image-section snap-section">
-      <img src="img/Mpishi Bora Campaign.jpg" alt="LPG" class="bc-img" />
-
-      <div class="overlay-2 fade-in-right">
-        <h1 data-aos="fade-up" data-aos-delay="100">LPG</h1>
-        <p data-aos="fade-up" data-aos-delay="300">Efficient delivery across regions.</p>
-        <p data-aos="fade-up" data-aos-delay="300">Quality, Clean and affordable gas solutions.</p>
-        <a href="#portfolio" class="btn btn-lyma">Learn More</a>
-      </div>
-    </section>
-
-    <section id="portfolio" class="section image-section">
-      <img src="img\Capture.png" alt="Portfolio" class="bg-img" />
-      <div class="overlay-content" data-aos="fade-right">
-        <h1>PORTFOLIO</h1>
-        <p>Successful partnerships and projects.</p>
-        <a href="#distribution" class="btn btn-lyma">Learn More</a>
-      </div>
-      <div class="custom-shape-divider-bottom-1749140203">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-        </svg>
-      </div>
-    </section>
-
-    <section id="distribution" class="section image-section">
-      <img src="img/DistributorshiptnewII.png" alt="Distribution" class="bc-img" />
-
-      <div class="overlay-2" data-aos="fade-up">
-        <h1 data-aos="fade-up" data-aos-delay="100">DISTRIBUTION</h1>
-        <p data-aos="fade-up" data-aos-delay="300">Efficient delivery across regions.</p>
-        <a href="#contact" class="btn btn-lyma" data-aos="fade-up" data-aos-delay="500">Learn More</a>
-      </div>
-
-      <div class="custom-shape-divider-top-1749140994"></div>
-    </section>
-
-
-    <section id="contact" class="section image-section">
-      <img src="img\County Gas Family.jpg" alt="Contact" class="bg-img" />
-      <div class="overlay-content" data-aos="fade-right">
-        <h1>LET'S TALK</h1>
-        <p>Fourth Business Park <br>
-            Ruiru, Eastern Bypass,<br>
-            Opposite @1.7 Lounge<br>
-            Business lines: 0728 170 155, 0748 240 575</p>
-        <a href="tel:+254728170155" class="btn btn-lyma">Call Now</a>
-      </div>
-    </section>
     </div>
-  </main>
+  </section>
 
-  <!-- Floating Red Call Button -->
-  <div class="floating-call-btn" aria-label="Call us" role="button" tabindex="0" onclick="window.location.href='tel:+254728170155'">
-    📞
+  <!-- LUBRICANTS SECTION -->
+  <section id="lubricants" class="py-5 animate__animated">
+    <div class="container">
+      <h2 class="section-title">Our Lubricants</h2>
+      <div class="row align-items-center mb-5">
+        <div class="col-md-6 text-center">
+          <img src="img\Image 5.jpg" alt="Lubricant Graphic" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+          <h3 class="text-danger">High-Performance Lubricants</h3>
+          <p>Our lubricants deliver superior protection and performance with advanced technology and premium base oils.</p>
+          <p>Whether it's for your personal vehicle or industrial equipment, we have the right solution for you.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card product-card">
+            <div class="card-header">
+              <i class="fas fa-motorcycle fa-2x text-white"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Motorcycle Lubricants</h5>
+              <p class="card-text">Optimized for high-revving engines and peak performance.</p>
+              <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card product-card">
+            <div class="card-header">
+              <i class="fas fa-car fa-2x text-white"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Car Lubricants</h5>
+              <p class="card-text">Engineered for long-lasting engine protection and smooth driving.</p>
+              <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card product-card">
+            <div class="card-header">
+              <i class="fas fa-truck fa-2x text-white"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Heavy Duty Oils</h5>
+              <p class="card-text">Designed for heavy-duty commercial and industrial machinery.</p>
+              <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card product-card">
+            <div class="card-header">
+              <i class="fas fa-cogs fa-2x text-white"></i>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Greases</h5>
+              <p class="card-text">Reliable lubrication for moving parts and extreme conditions.</p>
+              <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LPG SECTION -->
+  <section id="lpg" class="py-5 bg-light animate__animated">
+    <div class="container">
+      <h2 class="section-title">LPG Solutions</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+            <img src="img\Image 11.jpg" alt="LPG Cylinder" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-danger"><strong>Gas Imeisha?!</strong> Don't Worry we've got you sorted!</h2>
+          <h4 class="text-dark">Clean & Efficient LPG</h4>
+          <p>LPG is clean-burning, efficient, and versatile – perfect for home, business, and industrial applications.</p>
+          <p>We deliver quality LPG solutions with safety and reliability in mind.</p>
+          <div class="mt-3">
+            <a href="#" class="btn btn-dark me-2">Order Now</a>
+            <a href="#" class="btn btn-danger">See Product List</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISTRIBUTION SECTION -->
+  <section id="distribution" class="py-5 text-white text-center position-relative animate__animated">
+    <!-- Background image using <img> -->
+  <img src="img\Image 12.jpg" alt="Distribution Background"
+       class="position-absolute top-0 start-0 w-100 h-400 object-fit-cover"
+       style="z-index: 0; opacity: 0.3;" />
+
+    <!-- Text content -->
+    <div class="container position-relative z-1 text-dark">
+      <h2 class="section-title text-black">Join Our Distribution Network</h2>
+      <p>Become a part of our growing distribution network and benefit from our quality products, competitive pricing, and excellent support.</p>
+      <a href="#" class="btn btn-danger mt-3">Partner With Us</a>
+      <div class="network-line mt-4 d-flex justify-content-center align-items-center">
+        <div class="dot"></div>
+        <div class="line"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="py-5 animate__animated">
+    <div class="container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="testimonial">
+        <blockquote></blockquote>
+        <p class="author"></p>
+        <p class="position"></p>
+      </div>
+      <div class="d-flex justify-content-center gap-3 mt-3">
+        <button class="slider-arrow left btn btn-light">&#10094;</button>
+        <button class="slider-arrow right btn btn-light">&#10095;</button>
+      </div>
+      <div class="slider-dots mt-3">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+<section id="contact" class="text-dark pt-5 position-relative overflow-hidden">
+  <!-- Top White Title Area -->
+  <div class="bg-white py-5 text-center">
+    <h2 class="section-title">LET'S TALK</h2>
   </div>
 
-  <!-- Footer -->
-  <footer class="footer text-center py-4">
-    <div>
-      <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
+  <!-- Background Image -->
+  <img src="assets/contact-banner.jpg" alt="Contact Background"
+       class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+       style="z-index: 0; opacity: 0.15;" />
+
+  <!-- Main Content Container -->
+  <div class="container position-relative z-1 py-5">
+    <div class="row align-items-center">
+      <!-- Left Column: Contact Info -->
+      <div class="col-md-6 animate__animated animate__slideInLeft">
+        <div class="p-4 p-md-5 shadow-lg rounded-4" style="background-color: rgba(255, 255, 255, 0.95);">
+          <h3 class="text-dark mb-3">Our Office</h3>
+          <p class="mb-1">Fourth Business Park</p>
+          <p class="mb-1">Ruiru, Eastern Bypass,</p>
+          <p class="mb-4">Opposite @1.7 Lounge</p>
+
+          <h3 class="text-dark mb-3">Business Lines</h3>
+          <p class="fs-5 mb-2">
+            <a href="tel:+254728170155" class="text-decoration-none text-dark phone-hover">0728 170 155</a>
+          </p>
+          <p class="fs-5 mb-4">
+            <a href="tel:+254748240575" class="text-decoration-none text-dark phone-hover">0748 240 575</a>
+          </p>
+
+          <a href="tel:+254728170155" class="btn btn-danger btn-lg mt-3">Call Now</a>
+        </div>
+      </div>
+
+      <!-- Right Column: Visual Graphic -->
+      <div class="col-md-6 text-center animate__animated animate__slideInRight">
+        <img src="img\Image 2.jpg" alt="LubriGas Graphic" class="img-fluid" style="max-height: 600px;">
+      </div>
     </div>
-    <p class="mt-2 mb-0">&copy; 2025 Lyma Energy. All rights reserved.</p>
+  </div>
+</section>
+
+
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="container text-white py-5">
+      <div class="row">
+        <div class="col-md-4 footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Lubricants</a></li>
+            <li><a href="#">LPG</a></li>
+            <li><a href="#">Distribution</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 footer-column">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#">Motorcycle Lubricants</a></li>
+            <li><a href="#">Car Lubricants</a></li>
+            <li><a href="#">Heavy Duty Oils</a></li>
+            <li><a href="#">Greases</a></li>
+            <li><a href="#">LPG Cylinders</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 footer-column">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><span class="icon">📍</span> 123 Energy Road, Industrial Area, City</li>
+            <li><span class="icon">✉️</span> info@lymaintergrated.com</li>
+            <li><span class="icon">📞</span> +1 234 567 8900</li>
+          </ul>
+          <div class="social-icons">
+            <a href="#" class="social-icon">f</a>
+            <a href="#" class="social-icon">in</a>
+            <a href="#" class="social-icon">li</a>
+            <a href="#" class="social-icon">tw</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

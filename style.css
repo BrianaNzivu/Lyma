@@ -1,332 +1,300 @@
-/* General */
-body, html {
-  margin: 0;
-  padding: 0;
+/* === GLOBAL UTILITIES === */
+body {
   font-family: 'Poppins', sans-serif;
-  color: white;
   scroll-behavior: smooth;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+a {
+  text-decoration: none;
 }
 
-p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-weight: 400;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Sticky transparent navbar */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1030;
-  background-color: transparent;
-  backdrop-filter: saturate(180%) blur(5px);
-  -webkit-backdrop-filter: saturate(180%) blur(5px);
-  transition: background-color 0.4s ease;
-}
-
-.navbar-brand {
-  color: transparent;
-  font-weight: 700;
-}
-
-.navbar .nav-link {
-  color: black !important;
-  font-weight: 600;
+/* === HERO SECTION === */
+.hero {
   position: relative;
-  padding-bottom: 0.25rem;
-  transition: color 0.3s ease;
+  overflow: hidden;
 }
 
-.navbar .nav-link.active,
-.navbar .nav-link:hover {
-  color: red !important;
+.overlay-shape {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 0, 0, 0.1);
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  z-index: 0;
 }
 
-.navbar .nav-link.active::after {
+/* === SECTIONS === */
+section {
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after {
   content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 3px;
-  background-color: red;
+  width: 60px;
+  height: 4px;
+  background: #FF0000;
+  display: block;
+  margin: 10px auto 0;
   border-radius: 2px;
 }
 
-/* Section container */
-.section, .image-section, .snap-section {
-  height: 100vh;
-  position: relative;
+/* === PRODUCT CARDS === */
+.product-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card .card-header {
+  background: #FF0000;
+  height: 100px;
+  border-bottom: none;
+}
+
+/* === LPG CIRCLE === */
+.dashed-circle {
+  border: 2px dashed #FF0000;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+/* === DISTRIBUTION LINE === */
+.network-line {
+  margin-top: 30px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 2rem;
-  box-sizing: border-box;
-  scroll-snap-align: start;
-  overflow: hidden;
+  gap: 20px;
 }
 
-/* Scroll snap container */
-.snap-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
+.network-line .line {
+  width: 200px;
+  border-top: 2px dashed #FF0000;
 }
 
-/* Background image */
-.bg-img {
+.network-line .dot {
+  width: 16px;
+  height: 16px;
+  background: #FF0000;
+  border-radius: 50%;
+}
+
+/* === TESTIMONIALS === */
+.testimonial {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial blockquote {
+  font-style: italic;
+}
+
+.testimonial .author {
+  color: #FF0000;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.testimonial .position {
+  color: #666;
+  font-size: 14px;
+}
+
+.slider-dots {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.slider-dots .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: gray;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.slider-dots .dot.active {
+  background: #FF0000;
+}
+
+/* === FOOTER === */
+footer {
+  background: #212121;
+  color: #eee;
+  padding: 60px 20px;
+}
+
+footer a {
+  color: #ccc;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.footer-column h4 {
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  padding-left: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.social-icons .social-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  background: #FF0000;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-weight: bold;
+}
+/* Contact Page Specific Styles */
+.contact-banner {
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+  color: white;
+}
+
+.phone-hover:hover {
+  color: #FF0000 !important;
+  text-decoration: underline;
+}
+
+.map-section iframe {
+  filter: grayscale(100%) brightness(90%) contrast(90%);
+}
+.bouncing-arrow {
+  font-size: 2rem;
+  color: #FF0000;
+  animation: bounceArrow 1.5s infinite;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+.card-header {
+  height: 100px;
+  background: #FF0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-title {
+  text-align: center;
+  font-weight: bold;
+}
+.card-text {
+  text-align: center;
+  margin-top: 10px;
+}
+/* === Distribution Section Background === */
+.distribution-bg {
+  background: url('img\Image 12.jpg') center/cover no-repeat;
+  position: relative;
+}
+
+.distribution-bg::before {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(0.6);
-  z-index: -1;
-  transition: transform 0.5s ease;
+  background-color: rgba(33, 33, 33, 0.7); /* optional dark overlay */
+  z-index: 0;
 }
 
-.image-section:hover .bg-img {
-  transform: scale(1.05);
-}
-
-/* Text overlay content */
-.overlay-content {
+.distribution-bg .container {
   position: relative;
-  z-index: 2;
-  color: white;
-  text-align: center;
-  max-width: 800px;
-  padding: 2rem;
-  font-weight: 600;
+  z-index: 1;
+}
+.phone-hover:hover {
+  color: #FF0000;
+  text-decoration: underline;
 }
 
-/* Overlay right box (optional) */
-.overlay-2 {
+#contact .section-title {
+  margin-bottom: 0;
+}
+
+/* Prevent contact image overlap by keeping content high z-index */
+#contact .container {
+  z-index: 1;
+  position: relative;
+}
+
+/* FadeIn once for call button if you want: */
+.btn.btn-danger {
+  animation: fadeInUp 0.8s ease both;
+}
+
+#contact{
+  margin-top: 180px;
+}
+/* Default nav link style */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #212121;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+/* Active nav link style */
+.navbar-nav .nav-link.active {
+  color: #FF0000;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: '';
   position: absolute;
-  top: 50%;
-  right: 5%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  animation: fadeInRight 1.5s ease forwards;
-  opacity: 0;
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100%) translateY(-50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) translateY(-50%);
-  }
-}
-
-/* Button */
-.btn-lyma {
-  background-color: red;
-  color: white !important;
-  border-radius: 10px;
-  padding: 0.5rem 1.5rem;
-  font-weight: 600;
-  border: none;
-  width: fit-content;
-  transition: background-color 0.3s ease;
-  margin: 1rem auto 0;
-}
-
-.btn-lyma:hover {
-  background-color: #cc0000;
-  color: white !important;
-}
-
-/* Bottom shape divider */
-.custom-shape-divider-bottom-1749140203,
-.custom-shape-divider-bottom-1749141146 {
-  position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1749140203 svg,
-.custom-shape-divider-bottom-1749141146 svg {
-  position: relative;
-  display: block;
-  width: calc(105% + 1.3px);
-  height: 94px;
-}
-
-.custom-shape-divider-bottom-1749140203 .shape-fill,
-.custom-shape-divider-bottom-1749141146 .shape-fill {
-  fill: #FFFFFF;
-}
-
-/* Breast cancer image */
-.bc-img {
-  width: 100%;
-  max-width: 750px;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 150px;
-}
-
-/* Floating call button */
-.floating-call-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: red;
-  color: white;
-  font-size: 2.2rem;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-  z-index: 1050;
-  user-select: none;
-  transition: background-color 0.3s ease;
-}
-
-.floating-call-btn:hover {
-  background-color: #cc0000;
-}
-
-/* Footer */
-.footer {
-  background-color: black;
-  color: white;
-  font-weight: 600;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.footer a {
-  color: white;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.footer a:hover {
-  color: red;
-}
-
-/* Scroll-down arrow */
-.scroll-down-arrow {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  color: white;
-  animation: bounce 2s infinite;
-  cursor: pointer;
-  z-index: 10;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(10px); }
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .image-section {
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  .overlay-content,
-  .overlay-2 {
-    padding: 1rem;
-    text-align: center;
-  }
-  .overlay-content h1,
-  .overlay-2 h1 {
-    font-size: 2rem;
-  }
-  .overlay-content p,
-  .overlay-2 p {
-    font-size: 1rem;
-  }
-  .bc-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 50px;
-    object-fit: cover;
-  }
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-  .overlay-2 {
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0;
-    padding: 1rem;
-    box-shadow: none;
-    animation: none;
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-  .btn-lyma {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-  }
-
-  /* New: Move lpg and distribution under ibc-img on mobile */
-  .ibc-img + .lpg,
-  .ibc-img + .distribution {
-    display: block;
-    margin-top: 1rem;
-    padding-left: 0;
-  }
-}
-
-/* Desktop styles: side by side with padding */
-@media (min-width: 769px) {
-  .image-section {
-    flex-direction: row;
-    align-items: center;
-  }
-  .ibc-img {
-    max-width: 50%;
-  }
-  .lpg,
-  .distribution {
-    max-width: 40%;
-    padding-left: 2rem;
-    display: block;
-  }
+  height: 3px;
+  background-color: #FF0000;
+  border-radius: 2px;
 }
