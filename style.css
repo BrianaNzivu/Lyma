@@ -298,3 +298,17 @@ footer a:hover {
   background-color: #FF0000;
   border-radius: 2px;
 }
+.bouncing-arrow {
+  font-size: 2rem;
+  color: #FF0000;
+  animation: bounceArrow 1.5s infinite;
+}
+
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}

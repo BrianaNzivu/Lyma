@@ -32,18 +32,30 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <section class="hero d-flex flex-column justify-content-center align-items-center text-center text-white bg-dark vh-100" id="home">
-    <div class="overlay-shape position-absolute"></div>
-    <div class="container position-relative z-1 animate__animated animate__fadeIn">
-      <h1 class="display-4 fw-bold">Premium Lubricants &<br>LPG Solutions</h1>
-      <p class="lead">Powering your engines and homes with quality products for optimal performance</p>
-      <a href="#contact" class="btn btn-danger btn-lg mt-3">Contact Us</a>
-    </div>
-    <div class="scroll-down position-absolute bottom-0 pb-4">
-      <span>Scroll Down</span>
-      <div class="bouncing-arrow">&#8595;</div>
-    </div>
-  </section>
+<section
+  class="hero d-flex flex-column justify-content-center align-items-center text-center text-white vh-100 position-relative overflow-hidden"
+  id="home"
+>
+  <!-- Background image -->
+  <img src="img\hero.png" alt="Hero Background"
+       class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+       style="z-index: 0; opacity: 1.0;" />
+
+  <!-- Hero content -->
+  <div class="container position-relative z-1 animate__animated animate__fadeIn">
+    <h1 class="display-4 fw-bold text-black mb-3">Premium Lubricants &<br>LPG Solutions</h1>
+    <p class="lead text-black mb-5">Powering your engines and homes with quality products for optimal performance</p>
+    <a href="#contact" class="btn btn-danger btn-lg mb-5">Contact Us</a>
+  </div>
+
+  <!-- Scroll down arrow -->
+  <div class="scroll-down position-absolute bottom-0 pb-4 z-1">
+    <span class="text-black">Scroll Down</span>
+    <div class="bouncing-arrow">&#8595;</div>
+  </div>
+</section>
+
+
 
   <!-- ABOUT US SECTION -->
   <section id="about" class="py-5 bg-light animate__animated">
