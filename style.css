@@ -312,60 +312,6 @@ footer a:hover {
     transform: translateY(10px);
   }
 }
-@media (max-width: 768px), (max-device-width: 768px) {
-  #heroCarousel .carousel-item img {
-    object-fit: contain !important;
-    width: 100%;
-    height: 70vh; /* INCREASE this to make image taller */
-    max-height: 70vh;
-    display: block;
-    margin: 0 auto;
-  }
-
-  #heroCarousel .carousel-caption {
-    bottom: 5% !important;
-  }
-
-  #heroCarousel .carousel-caption .bg-dark {
-    padding: 1rem !important;
-    max-width: 90%;
-  }
-}
-.hero-tall {
-  height: 130vh; /* or try 120vh / 125vh based on your need */
-}
-
-.hero-tall .carousel-item {
-  height: 100%;
-}
-
-.hero-tall .carousel-item img {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-  display: block;
-  margin: 0 auto;
-}
-
-/* General carousel image behavior */
-#heroCarousel .carousel-item img {
-  width: auto;
-  max-height: 80vh;
-  display: block;
-  margin: 0 auto;
-  object-fit: contain;
-}
-
-/* Scroll down arrow bounce (if not added already) */
-.bouncing-arrow {
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
 .carousel-inner,
 .carousel-item {
   height: 100%;
@@ -381,13 +327,7 @@ footer a:hover {
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .carousel-item img {
-    /* object-fit: contain;  optional if you want to avoid mobile cropping */
-  }
-}
-
-/* Optional: Scroll arrow bounce */
+/* Scroll down arrow bounce */
 .bouncing-arrow {
   animation: bounce 2s infinite;
 }
@@ -396,6 +336,20 @@ footer a:hover {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .carousel-item img {
+    object-fit: contain;
+  }
+
+  .hero-caption {
+    position: relative;
+    top: -10vh; /* Lift text higher on mobile */
+  }
+}
+
+
 
 /* #heroCarousel .carousel-item img {
   width: 100%;
