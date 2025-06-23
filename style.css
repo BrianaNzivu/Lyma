@@ -312,3 +312,27 @@ footer a:hover {
     transform: translateY(10px);
   }
 }
+@media (max-width: 768px) {
+  #heroCarousel .carousel-item img {
+    object-fit: contain !important;
+  }
+}
+@media (max-width: 768px) {
+  #heroCarousel .carousel-caption h1 {
+    font-size: 1.8rem; /* Smaller headline */
+  }
+
+  #heroCarousel .carousel-caption p {
+    font-size: 1rem; /* Smaller subtext */
+  }
+
+  #heroCarousel .carousel-caption .bg-dark {
+    padding: 1rem !important; /* Reduce padding of the black box */
+  }
+
+  #heroCarousel .btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+
