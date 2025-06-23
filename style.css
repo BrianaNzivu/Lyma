@@ -315,24 +315,62 @@ footer a:hover {
 @media (max-width: 768px), (max-device-width: 768px) {
   #heroCarousel .carousel-item img {
     object-fit: contain !important;
+    width: 100%;
+    height: 70vh; /* INCREASE this to make image taller */
+    max-height: 70vh;
+    display: block;
+    margin: 0 auto;
   }
 
-  #heroCarousel .carousel-caption h1 {
-    font-size: 1.8rem;
-  }
-
-  #heroCarousel .carousel-caption p {
-    font-size: 1rem;
+  #heroCarousel .carousel-caption {
+    bottom: 5% !important;
   }
 
   #heroCarousel .carousel-caption .bg-dark {
     padding: 1rem !important;
-  }
-
-  #heroCarousel .btn-lg {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    max-width: 90%;
   }
 }
+.hero-tall {
+  height: 130vh; /* or try 120vh / 125vh based on your need */
+}
 
+.hero-tall .carousel-item {
+  height: 100%;
+}
+
+.hero-tall .carousel-item img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .hero-tall {
+    height: 130vh; /* mobile keeps this tall too */
+  }
+
+  .hero-tall .carousel-caption {
+    bottom: 5%;
+  }
+
+  .hero-tall .carousel-caption h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-tall .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .hero-tall .carousel-caption .bg-dark {
+    padding: 1rem;
+  }
+
+  .hero-tall .btn-lg {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
 
