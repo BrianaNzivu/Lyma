@@ -349,12 +349,46 @@ footer a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  /* GENERAL SECTION PADDING */
+  #about, #lubricants, #lpg {
+    padding: 2rem 1rem !important; /* reduces side padding + keeps top/bottom spacious */
+  }
 
+  /* HEADINGS */
+  #about h2, #about h3,
+  #lubricants h2, #lubricants h3,
+  #lpg h2, #lpg h4 {
+    margin-bottom: 1rem;
+  }
 
-/* #heroCarousel .carousel-item img {
-  width: 100%;
-  height: 200px; 
-  object-fit: cover; 
-  margin-top: -170px;
-} */
+  /* PARAGRAPHS */
+  #about p,
+  #lubricants p,
+  #lpg p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* PRODUCT CARDS */
+  .product-card {
+    margin-bottom: 1rem;
+  }
+
+  /* BUTTONS */
+  #about a.btn,
+  #lubricants a.btn,
+  #lpg a.btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  /* IMAGE SPACING */
+  #about img,
+  #lubricants img,
+  #lpg img {
+    margin-bottom: 1rem;
+  }
+}
 
