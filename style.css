@@ -312,22 +312,21 @@ footer a:hover {
     transform: translateY(10px);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-device-width: 768px) {
   #heroCarousel .carousel-item img {
     object-fit: contain !important;
   }
-}
-@media (max-width: 768px) {
+
   #heroCarousel .carousel-caption h1 {
-    font-size: 1.8rem; /* Smaller headline */
+    font-size: 1.8rem;
   }
 
   #heroCarousel .carousel-caption p {
-    font-size: 1rem; /* Smaller subtext */
+    font-size: 1rem;
   }
 
   #heroCarousel .carousel-caption .bg-dark {
-    padding: 1rem !important; /* Reduce padding of the black box */
+    padding: 1rem !important;
   }
 
   #heroCarousel .btn-lg {
@@ -335,4 +334,5 @@ footer a:hover {
     font-size: 1rem;
   }
 }
+
 
