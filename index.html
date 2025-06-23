@@ -33,30 +33,34 @@
 
 <!-- Home Section-->
 <section id="home" class="vh-100 position-relative overflow-hidden">
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" style="height: 130vh;">
+  <div id="heroCarousel" class="carousel slide carousel-fade vh-100" data-bs-ride="carousel" data-bs-interval="3000">
     <div class="carousel-inner h-100">
 
       <!-- Slide 1: Lubricants -->
-      <div class="carousel-item active h-100">
-        <img src="img/three.jpg" class="d-block w-100 h-100 object-fit-cover object-fit-md-contain" alt="Lubricants Slide" style="opacity: 0.8;">
-        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-          <div class="bg-dark bg-opacity-50 p-4 rounded">
-            <h1 class="display-4 fw-bold mb-3 text-white">Top-Quality Lubricants</h1>
-            <p class="lead mb-4 text-white">Trusted by Kenyan drivers and industries — for smooth rides and lasting engines.</p>
-            <a href="#contact" class="btn btn-danger btn-lg">Contact Us</a>
-          </div>
+      <div class="carousel-item active vh-100 d-flex align-items-center justify-content-center position-relative">
+        <!-- Desktop image -->
+        <img src="img/threedesk.jpg" class="carousel-img desktop-img position-absolute top-0 start-0 w-100 h-100" alt="Lubricants">
+        <!-- Mobile image -->
+        <img src="img/lubricants-mobile.jpg" class="carousel-img mobile-img position-absolute top-0 start-0 w-100 h-100" alt="Lubricants">
+
+        <div class="bg-dark bg-opacity-50 p-4 rounded text-center position-relative z-1">
+          <h1 class="text-white fw-bold mb-3">Top-Quality Lubricants</h1>
+          <p class="text-white lead mb-4">Trusted by Kenyan drivers and industries — for smooth rides and lasting engines.</p>
+          <a href="#contact" class="btn btn-danger btn-lg">Contact Us</a>
         </div>
       </div>
 
       <!-- Slide 2: LPG -->
-      <div class="carousel-item h-100">
-        <img src="img/IMAGE 6.jpg" class="d-block w-100 h-100 object-fit-cover object-fit-md-contain" alt="LPG Slide" style="opacity: 0.8;">
-        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-          <div class="bg-dark bg-opacity-50 p-4 rounded">
-            <h1 class="display-4 fw-bold mb-3 text-white">Clean LPG for Every Home</h1>
-            <p class="lead mb-4 text-white">Affordable, safe gas for your cooking and business needs across Kenya.</p>
-            <a href="#contact" class="btn btn-danger btn-lg">Contact Us</a>
-          </div>
+      <div class="carousel-item vh-100 d-flex align-items-center justify-content-center position-relative">
+        <!-- Desktop image -->
+        <img src="img/image6desk.jpg" class="carousel-img desktop-img position-absolute top-0 start-0 w-100 h-100" alt="LPG">
+        <!-- Mobile image -->
+        <img src="img/lpg-mobile.jpg" class="carousel-img mobile-img position-absolute top-0 start-0 w-100 h-100" alt="LPG">
+
+        <div class="bg-dark bg-opacity-50 p-4 rounded text-center position-relative z-1">
+          <h1 class="text-white fw-bold mb-3">Clean LPG for Every Home</h1>
+          <p class="text-white lead mb-4">Affordable, safe gas for your cooking and business needs across Kenya.</p>
+          <a href="#contact" class="btn btn-danger btn-lg">Contact Us</a>
         </div>
       </div>
 
@@ -74,11 +78,12 @@
   </div>
 
   <!-- Scroll Down Arrow -->
-  <div class="scroll-down position-absolute bottom-0 start-50 translate-middle-x pb-4 z-1">
-    <span class="text-white">Scroll Down</span>
+  <div class="scroll-down position-absolute bottom-0 start-50 translate-middle-x pb-4 z-1 text-white">
+    <span>Scroll Down</span>
     <div class="bouncing-arrow">&#8595;</div>
   </div>
 </section>
+
 
   <!-- ABOUT US SECTION -->
   <section id="about" class="py-5 bg-light animate__animated">
