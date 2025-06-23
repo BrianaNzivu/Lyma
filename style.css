@@ -366,19 +366,41 @@ footer a:hover {
   50% { transform: translateY(-10px); }
 }
 
-/* Desktop images */
-.carousel-img {
-  object-fit: cover; /* or use contain if you prefer seeing the whole image */
+.carousel-inner,
+.carousel-item {
+  height: 100%;
 }
 
-/* Show desktop image by default */
-.desktop-img { display: block; }
-.mobile-img { display: none; }
+.carousel-item picture,
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+}
 
-/* On small screens, swap */
+.carousel-item img {
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
-  .desktop-img { display: none; }
-  .mobile-img { display: block; }
+  .carousel-item img {
+    /* object-fit: contain;  optional if you want to avoid mobile cropping */
+  }
 }
 
+/* Optional: Scroll arrow bounce */
+.bouncing-arrow {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* #heroCarousel .carousel-item img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  margin-top: -170px;
+} */
 
