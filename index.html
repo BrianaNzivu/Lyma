@@ -7,6 +7,7 @@
   <!-- Bootstrap & Animate.css CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -34,8 +35,6 @@
     </div>
   </div>
 </nav>
-
-
 
 <!-- HOME SECTION -->
 <section id="home" class="vh-100 d-flex align-items-center justify-content-center position-relative overflow-hidden">
@@ -74,71 +73,98 @@
 
 
 <!-- LUBRICANTS SECTION -->
-<section id="lubricants" class="animate__animated">
+<section id="lubricants" class="py-5 bg-light">
   <div class="container">
-    <h2 class="section-title">Our Lubricants</h2>
-    <div class="row align-items-center mb-4">
-      <div class="col-md-6 text-center mb-3 mb-md-0">
-        <img src="img/two.jpg" alt="Lubricant Graphic" class="img-fluid rounded shadow">
-      </div>
-      <div class="col-md-6">
-        <h3 class="text-danger">High-Performance Lubricants</h3>
-        <p>Our lubricants deliver superior protection and performance with advanced technology and premium base oils.</p>
-        <p>Whether it's for your personal vehicle or industrial equipment, we have the right solution for you.</p>
+    <h2 class="section-title" style="font-size: 2.5rem;">Our Lubricants</h2>
+    <div class="row gx-5 gy-4 align-items-center mb-5">
+    
+    <!-- Image Column -->
+    <div class="col-md-6 mb-4 mb-md-0">
+      <img src="img/lubricant.jpg" alt="Lubricant Graphic"
+            class="img-fluid w-100 h-100 object-fit-cover"
+            style="min-height: 500px; max-height: 100%; object-position: center; border: 0px solid #222;">
+    </div>
+
+      <!-- Text Column -->
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+        <h3 class="text-danger mb-4" style="font-family: 'League Spartan', sans-serif; font-size: 2.4rem;">
+          High-Performance Lubricants
+        </h3>
+
+        <p style="font-family: 'Manrope', sans-serif; font-size: 1.2rem; line-height: 2; margin-bottom: 1.5rem;">
+          Whether you're pushing a <strong>boda</strong> through Nairobi traffic, cruising down Thika Road, or managing
+          heavy machines in an industrial yard — your engine deserves premium protection.
+        </p>
+
+        <p style="font-family: 'Manrope', sans-serif; font-size: 1.2rem; line-height: 2; margin-bottom: 1.5rem;">
+          Our lubricants are engineered to handle Kenyan heat, long hours, and real hustle. Smooth rides, longer engine life,
+          and peace of mind — that’s our promise.
+        </p>
+
+        <p style="font-family: 'Manrope', sans-serif; font-size: 1.2rem; line-height: 2;">
+          From <strong>motorcycles</strong> to <strong>matatus</strong>, personal cars to <strong>construction giants</strong> —
+          we’ve got the oil for your grind.
+        </p>
+
+        <!-- CTA Button -->
+        <div class="mt-4">
+          <a href="#contact" class="btn btn-dark btn-lg px-4">Order Now</a>
+        </div>
       </div>
     </div>
-    <div class="row g-3">
+
+    <!-- Product Cards -->
+    <div class="row g-4">
       <div class="col-6 col-md-3">
-        <div class="card product-card">
-          <div class="card-header"><i class="fas fa-motorcycle fa-2x text-white"></i></div>
+        <div class="card product-card h-100">
+          <div class="card-header bg-danger text-white d-flex align-items-center justify-content-center">
+            <i class="fas fa-motorcycle fa-2x"></i>
+          </div>
           <div class="card-body">
             <h5 class="card-title">Motorcycle Lubricants</h5>
             <p class="card-text">Optimized for high-revving engines.</p>
-            <div class="d-flex justify-content-center">
-              <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
-            </div>
           </div>
         </div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="card product-card">
-          <div class="card-header"><i class="fas fa-car fa-2x text-white"></i></div>
+        <div class="card product-card h-100">
+          <div class="card-header bg-danger text-white d-flex align-items-center justify-content-center">
+            <i class="fas fa-car fa-2x"></i>
+          </div>
           <div class="card-body">
             <h5 class="card-title">Car Lubricants</h5>
             <p class="card-text">Long-lasting engine protection.</p>
-            <div class="d-flex justify-content-center">
-              <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
-            </div>
           </div>
         </div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="card product-card">
-          <div class="card-header"><i class="fas fa-truck fa-2x text-white"></i></div>
+        <div class="card product-card h-100">
+          <div class="card-header bg-danger text-white d-flex align-items-center justify-content-center">
+            <i class="fas fa-truck fa-2x"></i>
+          </div>
           <div class="card-body">
             <h5 class="card-title">Heavy Duty Oils</h5>
-            <p class="card-text">For industrial machinery.</p>
-            <div class="d-flex justify-content-center">
-              <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
-            </div>
+            <p class="card-text">For commercial-grade machinery.</p>
           </div>
         </div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="card product-card">
-          <div class="card-header"><i class="fas fa-cogs fa-2x text-white"></i></div>
+        <div class="card product-card h-100">
+          <div class="card-header bg-danger text-white d-flex align-items-center justify-content-center">
+            <i class="fas fa-cogs fa-2x"></i>
+          </div>
           <div class="card-body">
             <h5 class="card-title">Greases</h5>
-            <p class="card-text">For extreme conditions.</p>
-            <div class="d-flex justify-content-center">
-              <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
-            </div>
+            <p class="card-text">Ideal for extreme conditions.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
+
 
 <!-- LPG SECTION -->
 <section id="lpg" class="bg-light animate__animated">
