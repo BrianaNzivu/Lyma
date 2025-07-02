@@ -191,11 +191,10 @@ footer h4 {
   padding-bottom: 0.25rem;
 }
 
-/* === LOGO SIZE & ALIGNMENT === */
+/* === LOGO === */
 .navbar-brand img {
-  max-height: 120px;
+  max-height: 60px; /* Ensure logo fits inside navbar */
   width: auto;
-  display: block;
 }
 
 /* === NAVBAR LINKS === */
@@ -229,6 +228,11 @@ footer h4 {
 .navbar-nav {
   gap: 1.5rem;
 }
+
+#home {
+  padding-top: 80px; /* Same height as navbar */
+}
+
 
 
 /* === BOUNCING ARROW === */
