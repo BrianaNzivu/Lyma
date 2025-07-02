@@ -18,19 +18,29 @@ document.addEventListener("DOMContentLoaded", () => {
 let currentSlide = 0;
 const testimonials = [
   {
-    quote: "\"LubriGas has been a game-changer for our fleet management. Their lubricants and LPG solutions are unmatched.\"",
-    name: "John Smith",
-    title: "Fleet Manager, TransCargo Ltd"
+    quote: "\"Since I switched to Lyma lubricants, my bike engine runs smoother, and I don't stress about breakdowns. Hii mafuta ni legit!\"",
+    name: "Kevin M.",
+    title: "Boda Rider, Umoja"
   },
   {
-    quote: "\"Reliable products and professional support – LubriGas is our go-to supplier for industrial lubricants.\"",
-    name: "Emily Chen",
+    quote: "\"Reliable products and professional support – Lyma is our go-to supplier for industrial lubricants.\"",
+    name: "Emily K.",
     title: "Operations Lead, MechaTech"
   },
   {
-    quote: "\"Safe and clean LPG with fast delivery. Perfect for both our home and commercial use.\"",
+    quote: "\"I used to struggle finding quality oil for my car. With Lyma, I get the best service and my car runs like brand new.\"",
     name: "Ahmed R.",
-    title: "Restaurant Owner"
+    title: "Car Enthusiast, Mombasa"
+  },
+  {
+    quote: "\"Their LPG is always clean and delivered fast. I run a hotel, and with Lyma, I never worry about gas imeisha.\"",
+    name: "Njeri M.",
+    title: "Hotel Owner, Eldoret"
+  },
+    {
+    quote: "\"Lyma LPG changed my kitchen game! The gas lasts longer, burns clean, and I can order and get it delivered in minutes. No more last-minute stress!\"",
+    name: "Valerie N.,",
+    title: "Apartment Tenant, Nairobi CBD"
   }
 ];
 

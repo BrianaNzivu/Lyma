@@ -120,25 +120,51 @@ section {
 
 /* === FOOTER === */
 footer {
-  background: #212121;
+  background: #000;
   color: #eee;
   padding: 60px 20px;
+  text-align: center; /* Center everything */
 }
-footer a {
-  color: #ccc;
+
+.footer-column {
+  margin-bottom: 30px;
 }
-footer a:hover {
-  color: #fff;
-}
-.footer-column h4 {
+
+footer h4 {
   margin-bottom: 20px;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
+
 .footer-column ul {
-  padding-left: 0;
+  list-style: none;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  margin: 0 auto;
+  display: inline-block; /* Keep ul centered */
+  text-align: left;      /* Align list items nicely */
 }
+
 .footer-column ul li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
+
+.footer-column a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #FF0000;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
 .social-icons .social-icon {
   display: inline-block;
   width: 32px;
@@ -148,25 +174,39 @@ footer a:hover {
   color: white;
   text-align: center;
   border-radius: 50%;
-  margin-right: 10px;
+  margin: 0 5px;
   font-weight: bold;
+  font-size: 1rem;
 }
+
+
 /* === TRANSPARENT NAVBAR === */
 .transparent-navbar {
   background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   transition: background-color 0.3s ease;
   z-index: 999;
+  height: 80px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+/* === LOGO SIZE & ALIGNMENT === */
+.navbar-brand img {
+  max-height: 120px;
+  width: auto;
+  display: block;
 }
 
 /* === NAVBAR LINKS === */
 .navbar-nav .nav-link {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: black;
   position: relative;
-  padding: 0.5rem 0.75rem;
+  padding: 0 0.75rem;
+  line-height: 80px;
   transition: all 0.3s ease;
 }
 
@@ -178,7 +218,7 @@ footer a:hover {
 .navbar-nav .nav-link.active::after {
   content: '';
   position: absolute;
-  bottom: -6px;
+  bottom: 12px;
   left: 0;
   width: 100%;
   height: 3px;
@@ -190,6 +230,7 @@ footer a:hover {
 .navbar-nav {
   gap: 1.5rem;
 }
+
 
 /* === BOUNCING ARROW === */
 .bouncing-arrow {
@@ -206,19 +247,36 @@ footer a:hover {
 
 /* === CONTACT === */
 #contact {
-  padding: 1rem 0;
-  margin-top: 180px;
+  padding: 3rem 0;
+  margin-top: 0;
+  background-color: #f9f9f9;
 }
-#contact .container {
-  padding: 1rem 0;
-}
-#contact .bg-white {
-  padding: 1rem 0;
-}
+
 .phone-hover:hover {
   color: #FF0000 !important;
   text-decoration: underline;
 }
+
+#contact .section-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+
+#contact .container {
+  padding: 1rem 0;
+}
+
+#contact .bg-white {
+  padding: 1rem 0;
+}
+
+.phone-hover:hover {
+  color: #FF0000 !important;
+  text-decoration: underline;
+}
+
 
 /* === HERO GLASS BOX === */
 .hero-glass {
@@ -372,4 +430,52 @@ footer a:hover {
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
+}
+.company-card {
+  position: relative;
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 170px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.company-card img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.company-card:hover {
+  transform: scale(1.05);
+}
+
+.company-card::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 6px 0;
+  text-align: center;
+}
+
+/* Bigger OLA card */
+.company-card.ola {
+  height: 260px;
+  background-color: #000;
+}
+#contact .contact-card .row {
+  text-align: center;
 }
