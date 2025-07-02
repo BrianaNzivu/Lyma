@@ -11,193 +11,157 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- HEADER -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#"><span class="text-danger">Lyma</span><span class="text-dark">Intergrated</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#lubricants">Lubricants</a></li>
-          <li class="nav-item"><a class="nav-link" href="#lpg">LPG</a></li>
-          <li class="nav-item"><a class="nav-link" href="#distribution">Distribution</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-<section id="home" class="vh-100 position-relative overflow-hidden">
-  <div id="heroCarousel" class="carousel slide carousel-fade vh-100" data-bs-ride="carousel" data-bs-interval="3000">
-    <div class="carousel-inner h-100">
-
-      <!-- Slide 1: Lubricants -->
-      <div class="carousel-item active vh-100 d-flex align-items-center justify-content-center position-relative">
-        <picture class="w-100 h-100 position-absolute top-0 start-0">
-          <source srcset="img/IMAGE3Mobile.jpg" media="(max-width: 768px)">
-          <img src="img/threedesk.jpg" class="w-100 h-100 object-fit-cover" alt="Lubricants">
-        </picture>
-        <div class="bg-dark bg-opacity-50 p-4 rounded text-center position-relative z-1 hero-caption">
-          <h1 class="text-white fw-bold mb-3">Top-Quality Lubricants</h1>
-          <p class="text-white lead mb-4">Trusted by Kenyan drivers and industries — for smooth rides and lasting engines.</p>
-          <a href="#contact" class="btn btn-danger btn-lg">Contact Us</a>
-        </div>
-      </div>
-
-      <!-- Slide 2: LPG -->
-      <div class="carousel-item vh-100 d-flex align-items-center justify-content-center position-relative">
-        <picture class="w-100 h-100 position-absolute top-0 start-0">
-          <source srcset="img/IMAGE6Mobile.jpg" media="(max-width: 768px)">
-          <img src="img/image6desk.jpg" class="w-100 h-100 object-fit-cover" alt="LPG">
-        </picture>
-        <div class="bg-dark bg-opacity-50 p-4 rounded text-center position-relative z-1 hero-caption">
-          <h1 class="text-white fw-bold mb-3">Clean LPG for Every Home</h1>
-          <p class="text-white lead mb-4">Affordable, safe gas for your cooking and business needs across Kenya.</p>
-          <a href="#contact" class="btn btn-danger btn-lg">Contact Us</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Arrows -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+<!-- HEADER -->
+<nav class="navbar navbar-expand-lg fixed-top transparent-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white" href="#">
+      <span class="text-danger">Lyma</span><span class="text-white">Intergrated</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav gap-lg-4 gap-3">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#lubricants">Lubricants</a></li>
+        <li class="nav-item"><a class="nav-link" href="#lpg">LPG</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#distribution">Distribution</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </div>
+</nav>
+
+
+
+<!-- HOME SECTION -->
+<section id="home" class="vh-100 d-flex align-items-center justify-content-center position-relative overflow-hidden">
+
+  <!-- Background Image -->
+  <img src="img/BlendedImage.jpg" alt="Hero Background" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" style="opacity: 1.2; z-index: 0;" />
+
+ <!-- HERO TEXT BOX -->
+<div class="position-relative z-1 px-3 w-100 d-flex justify-content-center">
+  <div class="hero-glass text-white text-center">
+    <h1 class="hero-heading mb-3">
+      <span class="underline-drama">Fueling</span> Hustle. 
+      <span class="underline-drama">Powering</span> Life.
+    </h1>
+
+    <p class="hero-subtitle mb-3">
+      From boda bodas to big rigs — we keep Kenya
+      <span class="highlight-brush">moving</span>.
+    </p>
+
+    <p class="hero-paragraph mb-4">
+      At Lyma Integrated, we’ve delivered <span class="highlight-brush">trusted</span> lubricants and LPG across Kenya for over 25 years.<br>
+      When you think Lyma, think <span class="highlight-brush">reliability.</span>
+    </p>
+
+    <a href="#contact" class="btn btn-danger btn-lg">Talk to Us Today</a>
+  </div>
+</div>
 
   <!-- Scroll Down Arrow -->
-  <div class="scroll-down position-absolute bottom-0 start-50 translate-middle-x pb-4 z-1 text-white">
+  <div class="scroll-down position-absolute bottom-0 start-50 translate-middle-x pb-4 z-2 text-white text-center">
     <span>Scroll Down</span>
     <div class="bouncing-arrow">&#8595;</div>
   </div>
 </section>
 
 
-
-  <!-- ABOUT US SECTION -->
-  <section id="about" class="py-5 bg-light animate__animated">
-    <div class="container">
-      <h2 class="section-title">About Us</h2>
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <h3 class="text-danger">Your Trusted Partner in Energy Solutions</h3>
-          <p>Lyma Intergrated has been a leading provider of premium lubricants and LPG products for over 25 years.</p>
-          <p>Our commitment to excellence, innovation, and customer satisfaction has made us the preferred choice for individuals and businesses across the country.</p>
-          <p>With a nationwide distribution network and dedicated team of professionals, we ensure timely delivery and exceptional service.</p>
-        </div>
-        <div class="col-md-6 text-center">
-          <img src="img\Image 4.jpg" alt="About Graphic" class="img-fluid rounded shadow">
-        </div>
+<!-- LUBRICANTS SECTION -->
+<section id="lubricants" class="animate__animated">
+  <div class="container">
+    <h2 class="section-title">Our Lubricants</h2>
+    <div class="row align-items-center mb-4">
+      <div class="col-md-6 text-center mb-3 mb-md-0">
+        <img src="img/two.jpg" alt="Lubricant Graphic" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h3 class="text-danger">High-Performance Lubricants</h3>
+        <p>Our lubricants deliver superior protection and performance with advanced technology and premium base oils.</p>
+        <p>Whether it's for your personal vehicle or industrial equipment, we have the right solution for you.</p>
       </div>
     </div>
-  </section>
-
-  <!-- LUBRICANTS SECTION -->
-  <section id="lubricants" class="py-5 animate__animated">
-    <div class="container">
-      <h2 class="section-title">Our Lubricants</h2>
-      <div class="row align-items-center mb-5">
-        <div class="col-md-6 text-center">
-          <img src="img\two.jpg" alt="Lubricant Graphic" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-6">
-          <h3 class="text-danger">High-Performance Lubricants</h3>
-          <p>Our lubricants deliver superior protection and performance with advanced technology and premium base oils.</p>
-          <p>Whether it's for your personal vehicle or industrial equipment, we have the right solution for you.</p>
+    <div class="row g-3">
+      <div class="col-6 col-md-3">
+        <div class="card product-card">
+          <div class="card-header"><i class="fas fa-motorcycle fa-2x text-white"></i></div>
+          <div class="card-body">
+            <h5 class="card-title">Motorcycle Lubricants</h5>
+            <p class="card-text">Optimized for high-revving engines.</p>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row g-4">
-        <div class="col-md-3">
-          <div class="card product-card">
-            <div class="card-header">
-              <i class="fas fa-motorcycle fa-2x text-white"></i>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Motorcycle Lubricants</h5>
-              <p class="card-text">Optimized for high-revving engines and peak performance.</p>
-              <div class="d-flex justify-content-center">
-                <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
-              </div>
+      <div class="col-6 col-md-3">
+        <div class="card product-card">
+          <div class="card-header"><i class="fas fa-car fa-2x text-white"></i></div>
+          <div class="card-body">
+            <h5 class="card-title">Car Lubricants</h5>
+            <p class="card-text">Long-lasting engine protection.</p>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card product-card">
-            <div class="card-header">
-              <i class="fas fa-car fa-2x text-white"></i>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Car Lubricants</h5>
-              <p class="card-text">Engineered for long-lasting engine protection and smooth driving.</p>
-              <div class="d-flex justify-content-center">
-                <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
-              </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card product-card">
+          <div class="card-header"><i class="fas fa-truck fa-2x text-white"></i></div>
+          <div class="card-body">
+            <h5 class="card-title">Heavy Duty Oils</h5>
+            <p class="card-text">For industrial machinery.</p>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card product-card">
-            <div class="card-header">
-              <i class="fas fa-truck fa-2x text-white"></i>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Heavy Duty Oils</h5>
-              <p class="card-text">Designed for heavy-duty commercial and industrial machinery.</p>
-              <div class="d-flex justify-content-center">
-                <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card product-card">
-            <div class="card-header">
-              <i class="fas fa-cogs fa-2x text-white"></i>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Greases</h5>
-              <p class="card-text">Reliable lubrication for moving parts and extreme conditions.</p>
-              <div class="d-flex justify-content-center">
-                <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
-              </div>
-              
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card product-card">
+          <div class="card-header"><i class="fas fa-cogs fa-2x text-white"></i></div>
+          <div class="card-body">
+            <h5 class="card-title">Greases</h5>
+            <p class="card-text">For extreme conditions.</p>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn-outline-danger btn-sm">View Products</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- LPG SECTION -->
-  <section id="lpg" class="py-5 bg-light animate__animated">
-    <div class="container">
-      <h2 class="section-title">LPG Solutions</h2>
-      <div class="row align-items-center">
-        <div class="col-md-6 text-center">
-            <img src="img\Image 11.jpg" alt="LPG Cylinder" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-          <h2 class="text-danger"><strong>Gas Imeisha?!</strong> Don't Worry we've got you sorted!</h2>
-          <h4 class="text-dark">Clean & Efficient LPG</h4>
-          <p>LPG is clean-burning, efficient, and versatile – perfect for home, business, and industrial applications.</p>
-          <p>We deliver quality LPG solutions with safety and reliability in mind.</p>
-          <div class="mt-3">
-            <a href="#" class="btn btn-dark me-2">Order Now</a>
-            <a href="#" class="btn btn-danger">See Product List</a>
-          </div>
+<!-- LPG SECTION -->
+<section id="lpg" class="bg-light animate__animated">
+  <div class="container">
+    <h2 class="section-title">LPG Solutions</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center mb-3 mb-md-0">
+        <img src="img/Image 11.jpg" alt="LPG Cylinder" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-danger"><strong>Gas Imeisha?!</strong> We've got you sorted!</h2>
+        <h4 class="text-dark">Clean & Efficient LPG</h4>
+        <p>Clean-burning, efficient, and versatile – ideal for homes and businesses.</p>
+        <p>We provide reliable LPG solutions nationwide.</p>
+        <div>
+          <a href="#" class="btn btn-dark me-2">Order Now</a>
+          <a href="#" class="btn btn-danger">See Product List</a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- DISTRIBUTION SECTION -->
   <section id="distribution" class="py-5 text-white text-center position-relative animate__animated">
@@ -241,19 +205,20 @@
   </section>
 
   <!-- CONTACT SECTION -->
-<section id="contact" class="text-dark pt-5 position-relative overflow-hidden">
+<!-- CONTACT SECTION -->
+<section id="contact" class="text-dark position-relative overflow-hidden">
   <!-- Top White Title Area -->
-  <div class="bg-white py-5 text-center">
+  <div class="bg-white py-3 text-center">
     <h2 class="section-title">LET'S TALK</h2>
   </div>
 
   <!-- Main Content -->
-  <div class="container position-relative z-1 py-5" style="padding-bottom: 50px;">
+  <div class="container position-relative z-1 py-3">
     <div class="row g-4 align-items-stretch flex-wrap">
-      
+
       <!-- Contact Card -->
       <div class="col-12 col-md-6 d-flex animate__animated animate__slideInLeft">
-        <div class="p-4 p-md-5 shadow-lg rounded-4 w-100 d-flex flex-column justify-content-between h-100" style="background-color: rgba(255, 255, 255, 0.95);">
+        <div class="p-3 p-md-4 shadow-lg rounded-4 w-100 d-flex flex-column justify-content-between h-100" style="background-color: rgba(255, 255, 255, 0.95);">
           <div class="row">
             <div class="col-6">
               <h4 class="text-danger mb-3">Our Office</h4>
@@ -271,7 +236,7 @@
               </p>
             </div>
           </div>
-          <div class="text-center mt-4">
+          <div class="text-center mt-3">
             <a href="tel:+254728170155" class="btn btn-danger btn-lg">Call Now</a>
           </div>
         </div>
