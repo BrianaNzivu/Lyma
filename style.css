@@ -434,48 +434,72 @@ footer h4 {
     font-size: 1rem;
   }
 }
-.company-card {
-  position: relative;
-  background-color: #000;
-  border-radius: 12px;
-  overflow: hidden;
-  height: 170px;
-  transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.company-card img {
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.company-card:hover {
-  transform: scale(1.05);
-}
-
-.company-card::after {
-  content: attr(data-name);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #fff;
-  padding: 6px 0;
+/* === PORTFOLIO STYLES === */
+/* === Glass Cards === */
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 2rem 1rem;
   text-align: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Bigger OLA card */
-.company-card.ola {
-  height: 260px;
-  background-color: #000;
+.glass-card:hover {
+  background: rgba(255, 0, 0, 0.15);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(255, 0, 0, 0.2);
 }
+
+/* === Partner Logos === */
+.partner-logo {
+  max-height: 80px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Partner Name === */
+.partner-name {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.2rem;
+  color: #212121;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+.patterned-section {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 0;
+  color: rgb(173, 25, 25);
+  background-color: #1a1a1a;
+  background-image: url('#topo-lines-pattern');
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 0 30 Q 30 10 60 30 T 200 30 M 0 60 Q 20 40 60 60 T 200 60 M 0 90 Q 25 110 60 90 T 200 90 M 0 120 Q 35 100 70 120 T 200 120 M 0 150 Q 40 170 80 150 T 200 150' fill='none' stroke='%23FF0000' stroke-width='1.5' stroke-dasharray='6 4' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  backdrop-filter: blur(1px);
+}
+
+@keyframes pulseStroke {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 10;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animated-lines {
+  animation: pulseStroke 6s linear infinite;
+}
+

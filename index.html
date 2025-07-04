@@ -207,50 +207,101 @@
 </section>
 
 <!-- PORTFOLIO SECTION -->
-<section id="portfolio" class="py-5 bg-light text-center">
-  <div class="container">
-    <h2 class="section-title" style="font-size: 2.5rem;">Our Portfolio</h2>
-    <p style="max-width: 700px; margin: 0 auto 2.5rem; font-size: 1.15rem; font-family: 'Manrope', sans-serif;">
-      We’ve collaborated with some of Kenya’s biggest names in fuel, transport, and lubricants — from global automotive icons to trusted local distributors. Here's who we work with.
+<section id="portfolio" class="py-5 text-center position-relative overflow-hidden">
+  <!-- Background image pattern -->
+  <img src="img\PORTFOLIO BACKGROUND.jpg" 
+       alt="Portfolio Background Pattern" 
+       class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+       style="z-index: 0; opacity: 0.9;" />
+  
+<svg class="position-absolute top-0 start-0 w-100 h-100"
+     style="opacity: 0.08; z-index: 1;" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="diagonal-lines" patternUnits="userSpaceOnUse" width="10" height="10">
+      <path d="M -2,2 l 4,-4
+               M 0,10 l 10,-10
+               M 8,12 l 4,-4" 
+            stroke="#c42b2b" stroke-width="6"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#diagonal-lines)" />
+</svg>
+
+
+
+
+  <div class="container position-relative z-1">
+    <h2 class="section-title" style="font-size: 2.5rem; color: #212121;">Our Portfolio</h2>
+    <p style="max-width: 700px; margin: 0 auto 2.5rem; font-size: 1.15rem; font-family: 'Manrope', sans-serif; color: #444;">
+      We’ve partnered with top-tier brands across fuel, transport and logistics. Here's who we roll with.
     </p>
 
-    <!-- OLA Card Row -->
-    <div class="row justify-content-end mb-5">
-      <div class="col-md-6 col-lg-5">
-        <div class="company-card ola" data-name="OLA">
-          <img src="img\Ola-removebg-preview.png" alt="OLA" />
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
+      <!-- Example Partner Card -->
+      <div class="col">
+        <div class="glass-card">
+          <img src="img/lexus-removebg-preview.png" alt="Lexus Logo" class="partner-logo">
+          <h5 class="partner-name">Lexus</h5>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="glass-card">
+          <img src="img/image-removebg-subaru.png" alt="Subaru Logo" class="partner-logo">
+          <h5 class="partner-name">Subaru</h5>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="glass-card">
+          <img src="img\toyota.png" alt="Toyota Logo" class="partner-logo">
+          <h5 class="partner-name">Toyota</h5>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="glass-card">
+          <img src="img/benz.png" alt="Mercedes Logo" class="partner-logo">
+          <h5 class="partner-name">Mercedes</h5>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="glass-card">
+          <img src="img/shell-removebg-preview-removebg-preview.png" alt="Shell Logo" class="partner-logo">
+          <h5 class="partner-name">Shell</h5>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="glass-card">
+          <img src="img/rubis-removebg-preview.png" alt="Rubis Logo" class="partner-logo">
+          <h5 class="partner-name">Rubis</h5>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="glass-card">
+          <img src="img/image-removebg-total.png" alt="Total Logo" class="partner-logo">
+          <h5 class="partner-name">Total</h5>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="glass-card">
+          <img src="img/lacheka-removebg-preview.png" alt="Lacheka Logo" class="partner-logo">
+          <h5 class="partner-name">Lacheka</h5>
         </div>
       </div>
     </div>
 
-    <!-- Grid of Other Companies -->
-    <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-center">
-      <div class="col">
-        <div class="company-card" data-name="Lexus"><img src="img\lexus-removebg-preview.png" alt="Lexus" /></div>
-      </div>
-      <div class="col">
-        <div class="company-card" data-name="Subaru"><img src="img\image-removebg-subaru.png" alt="Subaru" /></div>
-      </div>
-      <div class="col">
-        <div class="company-card" data-name="Toyota"><img src="img\image-removebg-toyota.png" alt="Toyota" /></div>
-      </div>
-      <div class="col">
-        <div class="company-card" data-name="Mercedes"><img src="img\benz.png" alt="Mercedes" /></div>
-      </div>
-      <div class="col">
-        <div class="company-card" data-name="Shell"><img src="img\shell-removebg-preview-removebg-preview.png" alt="Shell" /></div>
-      </div>
-      <div class="col">
-        <div class="company-card" data-name="Rubis"><img src="img\rubis-removebg-preview.png" alt="Rubis" /></div>
-      </div>
-      <div class="col">
-        <div class="company-card" data-name="Total"><img src="img\image-removebg-total.png" alt="Total" /></div>
-      </div>
-      <div class="col">
-        <div class="company-card" data-name="Lacheka"><img src="img\lacheka-removebg-preview.png" alt="Lacheka" /></div>
-      </div>
+    <!-- CTA -->
+    <div class="mt-5">
+      <a href="#contact" class="btn btn-dark btn-lg">Partner With Us</a>
     </div>
+  </div>
 </section>
+
 
 
   <!-- DISTRIBUTION SECTION -->
@@ -311,7 +362,7 @@
           <div class="row g-4 justify-content-center w-100 text-center">
             <div class="col-12 col-sm-6">
               <h4 class="text-danger mb-3" style="font-family: 'League Spartan', sans-serif;">Our Office</h4>
-              <p class="mb-2" style="font-family: 'League Spartan', sans-serif; font-size: 1.5rem;">Fourth Business Park</p>
+              <p class="mb-2" style="font-family: 'League Spartan', sans-serif; font-size: 1.5rem;">Lyma Business Park, Kamakis</p>
               <p class="mb-2" style="font-family: 'League Spartan', sans-serif; font-size: 1.5rem;">Ruiru, Eastern Bypass</p>
               <p class="mb-0" style="font-family: 'League Spartan', sans-serif; font-size: 1.5rem;">Opposite @1.7 Lounge</p>
             </div>
@@ -319,7 +370,7 @@
             <div class="col-12 col-sm-6">
               <h4 class="text-danger mb-3" style="font-family: 'League Spartan', sans-serif;">Call Us</h4>
               <p class="fs-5 mb-2">
-                <a href="tel:+254728170155" class="text-decoration-none text-dark phone-hover" style="font-family: 'League Spartan', sans-serif; font-size: 1.5rem;">0728 170 155</a>
+                <a href="tel:+254728170155" class="text-decoration-none text-dark phone-hover" style="font-family: 'League Spartan', sans-serif; font-size: 1.5rem;">0796 920 094</a>
               </p>
               <p class="fs-5 mb-3">
                 <a href="tel:+254748240575" class="text-decoration-none text-dark phone-hover" style="font-family: 'League Spartan', sans-serif; font-size: 1.5rem;">0748 240 575</a>
@@ -368,9 +419,9 @@
       <div class="col-md-4 footer-column">
         <h4>Contact Us</h4>
         <ul>
-          <li><span class="icon">📍</span> Fourth Business Park, Ruiru</li>
-          <li><span class="icon">✉️</span> info@lymaintergrated.com</li>
-          <li><span class="icon">📞</span> +254 728 170 155</li>
+          <li><span class="icon">📍</span> Lyma Business Park, Kamakis</li>
+          <li><span class="icon">✉️</span> Info@lyma.co.ke</li>
+          <li><span class="icon">📞</span> 0796920094 / 0748240575/li>
         </ul>
       </div>
 
