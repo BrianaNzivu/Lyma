@@ -196,6 +196,11 @@ footer h4 {
   max-height: 182px; /* Ensure logo fits inside navbar */
   width: auto;
 }
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 50px; /* smaller logo on mobile */
+  }
+}
 
 /* === NAVBAR LINKS === */
 .navbar-nav .nav-link {
@@ -223,6 +228,29 @@ footer h4 {
   background-color: #FF0000;
   border-radius: 2px;
 }
+
+/* Hamburger background */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #fff !important;
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .navbar-nav .nav-link {
+    color: #000 !important;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link.active {
+    color: #FF0000 !important;
+    border-bottom: 2px solid #FF0000;
+  }
+}
+
 
 /* === SPACING FOR DESKTOP === */
 .navbar-nav {
